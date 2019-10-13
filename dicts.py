@@ -123,8 +123,35 @@ def translate_to_pirate_talk(phrase):
         >>> translate_to_pirate_talk("my student is not a man!")
         'me swabbie be not a man!'
     """
+    pirate_translation_dic = {'sir':         'matey',
+                              'hotel':       'fleabag inn',
+                              'student':     'swabbie',
+                              'man':         'matey',
+                              'professor':   'foul blaggart',
+                              'restaurant':  'galley',
+                              'your':        'yer',
+                              'excuse':      'arr',
+                              'students':    'swabbies',
+                              'are':         'be',
+                              'restroom':    'head',
+                              'my':          'me',
+                              'is':          'be'}
+    new_sentence = ''
 
-pass
+
+    words = phrase.split(' ')
+    
+    for word in words:
+
+        if pirate_translation_dic.get(word) != 0:
+            new_sentence += pirate_translation_dic[word]
+
+        else:
+            new_sentence += word + ' '    
+    return new_sentence
+
+print(translate_to_pirate_talk("my student is not a man"))
+
 
 
 def kids_game(names):
