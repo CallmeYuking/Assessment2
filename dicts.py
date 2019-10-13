@@ -28,8 +28,18 @@ def count_words(phrase):
         >>> print_dict(count_words("Porcupine see, porcupine do."))
         {'Porcupine': 1, 'do.': 1, 'porcupine': 1, 'see,': 1}
     """
+    words_dic = {}
+    words = phrase.split(' ')
 
-    return {}
+    for word in words:
+        words_dic[word] = words_dic.get(word, 0) + 1
+
+    return words_dic
+
+print(count_words("each word appears once"))
+print(count_words("rose is a rose is a rose"))
+print(count_words("Porcupine see, porcupine do."))
+
 
 
 def print_melon_at_price(price):
@@ -56,10 +66,24 @@ def print_melon_at_price(price):
 
         >>> print_melon_at_price(5.50)
         None found
-    """
+    """ 
+    melons_dic = {'Honeydew': 2.50,
+                  'Cantaloupe': 2.50,
+                  'Watermelon': 2.95,
+                  'Musk': 3.25,
+                  'Crenshaw': 3.25,
+                  'Christmas': 14.25}
+    for melon in melons_dic:
 
-    return
+        if price == melons_dic[melon]:
+            print(melon)
 
+    if price != melons_dic[melon]:
+        print('None found')    
+
+print_melon_at_price(2.50)
+print_melon_at_price(2.95)
+print_melon_at_price(5.50)
 
 def translate_to_pirate_talk(phrase):
     """Translate phrase to pirate talk.
@@ -100,7 +124,7 @@ def translate_to_pirate_talk(phrase):
         'me swabbie be not a man!'
     """
 
-    return ""
+pass
 
 
 def kids_game(names):
