@@ -46,6 +46,7 @@ class Road():
 
 
 road_1 = Road(4, 60)
+
 road_2 = Road(2, 25)
 
 print(road_1.num_lanes)
@@ -62,10 +63,14 @@ class User(object):
 
     def __init__(self, username, password):
         """Create a user with the given username and password."""
-
         self.username = username
         self.password = password
 
+    def update_password(self, current_psw, new_psw):
+        if self.password is not current_psw:
+            print('Invalid password')
+        elif self.password is current_psw:
+            self.new_psw = self.password
 
 
 #####################################################################

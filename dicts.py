@@ -77,81 +77,79 @@ def print_melon_at_price(price):
 
         if price == melons_dic[melon]:
             print(melon)
-
-    if price != melons_dic[melon]:
-        print('None found')    
+    print('None found')    
 
 print_melon_at_price(2.50)
 print_melon_at_price(2.95)
 print_melon_at_price(5.50)
 
 def translate_to_pirate_talk(phrase):
-#     """Translate phrase to pirate talk.
+    """Translate phrase to pirate talk.
 
-#     Given a phrase, translate each word to the Pirate-speak
-#     equivalent. Words that cannot be translated into Pirate-speak
-#     should pass through unchanged. Return the resulting sentence.
+    Given a phrase, translate each word to the Pirate-speak
+    equivalent. Words that cannot be translated into Pirate-speak
+    should pass through unchanged. Return the resulting sentence.
 
-#     Here's a table of English to Pirate translations:
+    Here's a table of English to Pirate translations:
 
-#     ----------  ----------------
-#     English     Pirate
-#     ----------  ----------------
-#     sir         matey
-#     hotel       fleabag inn
-#     student     swabbie
-#     man         matey
-#     professor   foul blaggart
-#     restaurant  galley
-#     your        yer
-#     excuse      arr
-#     students    swabbies
-#     are         be
-#     restroom    head
-#     my          me
-#     is          be
-#     ----------  ----------------
+    ----------  ----------------
+    English     Pirate
+    ----------  ----------------
+    sir         matey
+    hotel       fleabag inn
+    student     swabbie
+    man         matey
+    professor   foul blaggart
+    restaurant  galley
+    your        yer
+    excuse      arr
+    students    swabbies
+    are         be
+    restroom    head
+    my          me
+    is          be
+    ----------  ----------------
 
-#     For example::
+    For example::
 
-#         >>> translate_to_pirate_talk("my student is not a man")
-#         'me swabbie be not a matey'
+        >>> translate_to_pirate_talk("my student is not a man")
+        'me swabbie be not a matey'
 
-#     You should treat words with punctuation as if they were different
-#     words::
+    You should treat words with punctuation as if they were different
+    words::
 
-#         >>> translate_to_pirate_talk("my student is not a man!")
-#         'me swabbie be not a man!'
-#     """
-#     pirate_translation_dic = {'sir':         'matey',
-#                               'hotel':       'fleabag inn',
-#                               'student':     'swabbie',
-#                               'man':         'matey',
-#                               'professor':   'foul blaggart',
-#                               'restaurant':  'galley',
-#                               'your':        'yer',
-#                               'excuse':      'arr',
-#                               'students':    'swabbies',
-#                               'are':         'be',
-#                               'restroom':    'head',
-#                               'my':          'me',
-#                               'is':          'be'}
-#     new_sentence = ''
+        >>> translate_to_pirate_talk("my student is not a man!")
+        'me swabbie be not a man!'
+    """
+    pirate_translation_dic = {'sir':         'matey',
+                              'hotel':       'fleabag inn',
+                              'student':     'swabbie',
+                              'man':         'matey',
+                              'professor':   'foul blaggart',
+                              'restaurant':  'galley',
+                              'your':        'yer',
+                              'excuse':      'arr',
+                              'students':    'swabbies',
+                              'are':         'be',
+                              'restroom':    'head',
+                              'my':          'me',
+                              'is':          'be'}
+    new_sentence = ''
 
 
-#     words = phrase.split(' ')
+    words = phrase.split(' ')
     
-#     for word in words:
+    for word in words:
 
-#         if pirate_translation_dic.get(word) is not 0:
-#             new_sentence += pirate_translation_dic[word]
+        if pirate_translation_dic.get(word) is not 0:
+            new_sentence += pirate_translation_dic[word]
 
-#         else:
-#             new_sentence += word 
+        else:
+            new_sentence += word 
 
-#     return new_sentence
+    return new_sentence
 
-# print(translate_to_pirate_talk("my student is not a man"))
+print(translate_to_pirate_talk("my student is not a man"))
 
     pass
 
