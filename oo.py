@@ -4,28 +4,31 @@
 1. What are the three main design advantages that object orientation
    can provide? Explain each concept.
 
-(replace this with your answer)
+    -1: Can store date.
+    -2: Has structure that's relatively stable.
+    -3: Has own smarts.
 
 
 2. What is a class?
 
-(replace this with your answer)
+    It's a type of a thing, like a container that can store information of data.
 
 
 3. What is a method?
-
-(replace this with your answer)
+    It's like a function defined on a class.
 
 
 4. What is an instance in object orientation?
 
-(replace this with your answer)
+    An individual occurrence of a class. Personally, I feel if the class is like
+    a framework then instances are like the bricks.
 
 
 5. How is a class attribute different than an instance attribute?
    Give an example of when you might use each.
 
-(replace this with your answer)
+    Class attributes can share across all instances under the class but instance
+    doesn't. Instance attributes take precedence over class attributes.
 """
 
 
@@ -33,7 +36,21 @@
 #####################################################################
 
 """2. Road Class"""
+class Road():
+    num_lanes = 2
+    speed_limit = 25
 
+    def __init__(self, lanes, limit):
+        self.lanes = lanes
+        self.limit = limit
+
+
+road_1 = Road(4, 60)
+road_2 = Road(2, 25)
+
+print(road_1.num_lanes)
+
+print(road_2.num_lanes)
 
 
 #####################################################################
